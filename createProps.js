@@ -11,7 +11,8 @@ import path from 'path';
 import {lstat, readdir} from 'node:fs/promises'
 import {join} from 'node:path'
 
-const srcLib = '../src/lib'
+const srcLib = './src/lib'
+const directory = './src/routes/props/';
 
 const getLines=(fileName, keyword)=> { 
   let outputs =[];
@@ -76,7 +77,6 @@ const writeToFile = (fileName, data) => {
 const exportLet = 'export let'
 
 // remove all files in the folder
-const directory = '../src/routes/props/';
 fs.readdir(directory, (err, files) => {
   if (err) throw err;
 
