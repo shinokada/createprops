@@ -1,0 +1,24 @@
+{
+  "name": "createprops",
+  "version": "0.0.1",
+  "description": "Create Svelte component props",
+  "main": "createProps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinokada/createProps.git"
+  },
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "prop"
+  ],
+  "author": "Shinichi Okada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinokada/createProps/issues"
+  },
+  "homepage": "https://github.com/shinokada/createProps#readme"
+}
