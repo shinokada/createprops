@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/shinokada/createProps/issues"
   },
-  "homepage": "https://github.com/shinokada/createProps#readme"
+  "homepage": "https://github.com/shinokada/createProps#readme",
+  "type": "module"
 }
