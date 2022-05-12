@@ -2,7 +2,7 @@
   "name": "createprops",
   "version": "0.0.3",
   "description": "Create Svelte component props",
-  "main": "createprops.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
