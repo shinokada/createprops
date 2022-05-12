@@ -1,12 +1,17 @@
-# createProps 
+# createprops
 
 ## Overview
 
+This script will create json files in the `src/routes/props` directory.
 
-## Requirement
+## Installation
 
+```
+npm i -D createprops
+```
 
 ## Usage
+
 
 
 ## Features
