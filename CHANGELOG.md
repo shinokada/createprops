@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/shinokada/createProps/compare/v0.0.4...v0.0.5) (2022-05-12)
+
+
+### Bug Fixes
+
+* add type module to package.json ([2db9bb8](https://github.com/shinokada/createProps/commit/2db9bb8aa685ba1a5ee09d9c38ffbbec8545d845))
+
 ### [0.0.4](https://github.com/shinokada/createProps/compare/v0.0.3...v0.0.4) (2022-05-12)
 
 
