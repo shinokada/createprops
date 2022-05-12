@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/shinokada/createProps/compare/v0.0.3...v0.0.4) (2022-05-12)
+
+
+### Bug Fixes
+
+* add index.js ([c82a09a](https://github.com/shinokada/createProps/commit/c82a09a8cdf956e6e6705aac3a65ccc828d41e0d))
+
 ### [0.0.3](https://github.com/shinokada/createProps/compare/v0.0.2...v0.0.3) (2022-05-12)
 
 ### 0.0.2 (2022-05-12)
