@@ -1,1 +1,1 @@
-export {defalut as createprops} from './createprops';
+export { defalut as createprops } from './createprops';

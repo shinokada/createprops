@@ -21,7 +21,7 @@ Your export prop must be in one line:
 
 ```js
 // bad because it has two lines
-1 export myprop = 
+1 export myprop =
 2 'bla bla bla'
 
 // good it is in one line
@@ -66,12 +66,9 @@ The default value for lib directory is `./src/lib`. You can change it using `--s
 
 ## Features
 
-
 ## Reference
 
-
 ## Author
-
 
 ## License
 
