@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/shinokada/createProps/compare/v0.0.6...v0.0.7) (2022-05-13)
+
+
+### Features
+
+* add --dir and --lib arguments ([aabe768](https://github.com/shinokada/createProps/commit/aabe7683380280ef7e0fd9710fe71a62b108394a))
+
 ### [0.0.6](https://github.com/shinokada/createProps/compare/v0.0.5...v0.0.6) (2022-05-12)
 
 ### [0.0.5](https://github.com/shinokada/createProps/compare/v0.0.4...v0.0.5) (2022-05-12)
