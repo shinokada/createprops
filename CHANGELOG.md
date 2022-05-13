@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/shinokada/createProps/compare/v0.0.7...v0.1.0) (2022-05-13)
+
+
+### Bug Fixes
+
+* fix naming ([fee7539](https://github.com/shinokada/createProps/commit/fee7539e93d2b6a00e7cc0e83d4a11a0c83eb132))
+
 ### [0.0.7](https://github.com/shinokada/createProps/compare/v0.0.6...v0.0.7) (2022-05-13)
 
 
