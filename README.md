@@ -27,7 +27,7 @@ The default value for destination is `./src/routes/props`. You can change it usi
 ```
 "scripts": {
 	...
-		"props": "node ./node_modules/createprops/createprops.js --dest=src/"
+		"props": "node ./node_modules/createprops/createprops.js --dest ./props/"
 	}
 ```
 
@@ -36,7 +36,7 @@ The default value for lib directory is `./src/lib`. You can change it using `--s
 ```
 "scripts": {
 	...
-		"props": "node ./node_modules/createprops/createprops.js --src=src/mylib"
+		"props": "node ./node_modules/createprops/createprops.js --src ./src/mylib-dir"
 	}
 ```
 
