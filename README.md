@@ -10,10 +10,10 @@ Please set `prettierrc`'s printWidth to more than 500.
 
 ```rc
 {
-	"useTabs": true,
-	"singleQuote": true,
-	"trailingComma": "none",
-	"printWidth": 500
+  "useTabs": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "printWidth": 500
 }
 ```
 
@@ -41,34 +41,28 @@ In your package.json add the following link in the `scripts`:
 ```
 ...
 "scripts": {
-	...
-		"props": "node ./node_modules/createprops/createprops.js"
-	}
+  ...
+    "props": "node ./node_modules/createprops/createprops.js"
+  }
 ```
 
 The default value for destination is `./src/routes/props`. You can change it using `--dest`:
 
 ```
 "scripts": {
-	...
-		"props": "node ./node_modules/createprops/createprops.js --dest ./props/"
-	}
+  ...
+    "props": "node ./node_modules/createprops/createprops.js --dest ./props/"
+  }
 ```
 
 The default value for lib directory is `./src/lib`. You can change it using `--src`:
 
 ```
 "scripts": {
-	...
-		"props": "node ./node_modules/createprops/createprops.js --src ./src/mylib-dir"
-	}
+  ...
+    "props": "node ./node_modules/createprops/createprops.js --src ./src/mylib-dir"
+  }
 ```
-
-## Features
-
-## Reference
-
-## Author
 
 ## License
 
