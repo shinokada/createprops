@@ -3,7 +3,8 @@
  * 
  * Run this script from the root of the project.
  * node createProps.js
- * 
+ * You can pass arguments to the script.
+ * node createProps.js --src=src/lib --dest=src/props 
  */
 
 import * as fs from 'fs';
@@ -11,31 +12,33 @@ import path from 'path';
 import {lstat, readdir} from 'node:fs/promises'
 import {join} from 'node:path'
 
-const defaultLib = './src/lib'
-const defaultDir = './src/routes/props/';
+const defaultSrc = './src/lib'
+const defaultDest = './src/routes/props/';
 const exportLet = 'export let'
 
-// Checks for --dir and if it has a value
-const dirIndex = process.argv.indexOf('--dir');
-let dirValue;
+// Checks for --dest (destination) and if it has a value
+const destIndex = process.argv.indexOf('--dest');
+let destValue;
 
-if (dirIndex > -1) {
-  // Retrieve the value after --dir
-  dirValue = process.argv[dirIndex + 1];
+if (destIndex > -1) {
+  // Retrieve the value after --dest
+  destValue = process.argv[destIndex + 1];
 }
 
-const directory = (dirValue || defaultDir);
+// set destination directory
+const directory = (destValue || defaultDest);
 
-// Checks for --lib and if it has a value
-const libIndex = process.argv.indexOf('--lib');
-let dirValue;
+// Checks for --src and if it has a value
+const srcIndex = process.argv.indexOf('--src');
+let srcValue;
 
-if (libIndex > -1) {
-  // Retrieve the value after --lib
-  libValue = process.argv[libIndex + 1];
+if (srcIndex > -1) {
+  // Retrieve the value after --src
+  srcValue = process.argv[srcIndex + 1];
 }
 
-const srcLib = (libValue || defaultLib);
+// set lib directory value
+const srcLib = (srcValue || defaultSrc);
 
 const getLines=(fileName, keyword)=> { 
   let outputs =[];
@@ -96,8 +99,6 @@ const writeToFile = (fileName, data) => {
     console.log('The file has been saved!', fileName);
   });
 }
-
-
 
 // remove all files in the folder
 fs.readdir(directory, (err, files) => {
