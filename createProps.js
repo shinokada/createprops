@@ -11,8 +11,31 @@ import path from 'path';
 import {lstat, readdir} from 'node:fs/promises'
 import {join} from 'node:path'
 
-const srcLib = './src/lib'
-const directory = './src/routes/props/';
+const defaultLib = './src/lib'
+const defaultDir = './src/routes/props/';
+const exportLet = 'export let'
+
+// Checks for --dir and if it has a value
+const dirIndex = process.argv.indexOf('--dir');
+let dirValue;
+
+if (dirIndex > -1) {
+  // Retrieve the value after --dir
+  dirValue = process.argv[dirIndex + 1];
+}
+
+const directory = (dirValue || defaultDir);
+
+// Checks for --lib and if it has a value
+const libIndex = process.argv.indexOf('--lib');
+let dirValue;
+
+if (libIndex > -1) {
+  // Retrieve the value after --lib
+  libValue = process.argv[libIndex + 1];
+}
+
+const srcLib = (libValue || defaultLib);
 
 const getLines=(fileName, keyword)=> { 
   let outputs =[];
@@ -74,7 +97,7 @@ const writeToFile = (fileName, data) => {
   });
 }
 
-const exportLet = 'export let'
+
 
 // remove all files in the folder
 fs.readdir(directory, (err, files) => {
