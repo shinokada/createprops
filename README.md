@@ -2,7 +2,7 @@
 
 ## Overview
 
-This script will create json files in the `src/routes/props` directory.
+This script will create json files in the `src/routes/props` directory. This script is created for Svelte and please let me know if it works for other framework.
 
 ## Limitation
 
@@ -20,12 +20,12 @@ Please set `prettierrc`'s printWidth to more than 500.
 Your export prop must be in one line:
 
 ```js
-// bad because it has two lines
-1 export myprop =
+// 💩 bad because it has two lines
+1 export let myprop =
 2 'bla bla bla'
 
 // good it is in one line
-1 export myprop = 'very long strings here ...... and it must be in one line'
+1 export let myprop = 'very long strings here ...... and it must be in one line'
 ```
 
 ## Installation
