@@ -6,7 +6,7 @@ This script will create json files in the `src/routes/props` directory. This scr
 
 ## Limitation
 
-Please set `prettierrc`'s printWidth to more than 500.
+1. Please set `prettierrc`'s printWidth to more than 500.
 
 ```rc
 {
@@ -26,6 +26,40 @@ Your export prop must be in one line:
 
 // good it is in one line
 1 export let myprop = 'very long strings here ...... and it must be in one line'
+```
+
+2. Do not use type inference
+
+Always write type explicitly.
+
+```js
+// 💩 no inference
+export let myvar = 'bla bla';
+
+// good
+export let myvar: string = 'bla bla';
+```
+
+## Example
+
+From `Aside.svelte`:
+
+```js
+export let transitionParams: TransitionParamTypes = {};
+export let transitionType: TransitionTypes = 'fly';
+export let asideClass: string = 'absolute w-auto h-screen bg-gray-200 border-r-2 shadow-lg';
+```
+
+To `Aside.json`:
+
+```json
+{
+  "props": [
+    ["transitionParams", " TransitionParamTypes ", " {}"],
+    ["transitionType", " TransitionTypes ", " 'fly'"],
+    ["asideClass", " string ", " 'absolute w-auto h-screen bg-gray-200 border-r-2 shadow-lg'"]
+  ]
+}
 ```
 
 ## Installation
