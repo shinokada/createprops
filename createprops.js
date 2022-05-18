@@ -75,7 +75,7 @@ function extractProps(arr) {
     // remove all line breaks
     let newline = line.replace(/[\r\n]+/gm, '');
     // remove tab indentation
-    newline = newline.replace('\texport let ', '');
+    newline = newline.replace(/\\t/g, '');
     // or space indentation
     newline = newline.replace('export let ', '');
     first = newline.slice(0, newline.indexOf(':'));

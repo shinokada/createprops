@@ -15,6 +15,8 @@
     up: ChevronUpSolid,
     down: ChevronDownSolid
   };
+  export let activeDropdownDiv: string =
+    'z-10 w-44 text-lg list-none bg-white rounded divide-y divide-gray-100 shadow';
   export let headerClass: string =
     'mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white';
   export let header: string = '';
