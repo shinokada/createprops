@@ -6,31 +6,21 @@ This script will create json files in the `src/routes/props` directory. This scr
 
 ## Limitation
 
-1. Please set `prettierrc`'s printWidth to more than 500.
+1. Each props end with `;`
 
-```rc
-{
-  "useTabs": true,
-  "singleQuote": true,
-  "trailingComma": "none",
-  "printWidth": 500
-}
-```
-
-Your export prop must be in one line:
+The script uses `;` to split lines. VS code automatically insert `;` at the end of each line.
 
 ```js
-// 💩 bad because it has two lines
-1 export let myprop =
-2 'bla bla bla'
+// 💩 no ; at the end
+export let myvar: string = 'bla bla';
 
-// good it is in one line
-1 export let myprop = 'very long strings here ...... and it must be in one line'
+// good
+export let myvar: string = 'bla bla';
 ```
 
 2. Do not use type inference
 
-Always write type explicitly.
+Always write types explicitly.
 
 ```js
 // 💩 no inference
@@ -60,6 +50,30 @@ To `Aside.json`:
     ["asideClass", " string ", " 'absolute w-auto h-screen bg-gray-200 border-r-2 shadow-lg'"]
   ]
 }
+```
+
+## Prop tables
+
+You can create a table using `Table` and `TableDefaultRow` components.
+
+Tailwind CSS example.
+
+```html
+<script>
+  import { Table, TableDefaultRow } from 'createprops';
+  import componentProps from '../Card/.json'
+  // Props table
+  let items = componentProps.props
+	let propHeader = ['Name', 'Type', 'Default']
+
+  let divClass='w-full relative overflow-x-auto shadow-md sm:rounded-lg py-4'
+
+  let theadClass ='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white'
+</scipt>
+
+<Table header={propHeader} {divClass} {theadClass}>
+  <TableDefaultRow {items} rowState='hover' />
+</Table>
 ```
 
 ## Installation
