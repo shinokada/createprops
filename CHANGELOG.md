@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/shinokada/createProps/compare/v0.1.4...v0.2.0) (2022-05-18)
+
+### Bug Fixes
+
+- no need of .prettierrc printWidth limit ([c4ca1ca](https://github.com/shinokada/createProps/commit/c4ca1ca61ae482c5962cfb694c1bb85abf627a36))
+
 ### [0.1.4](https://github.com/shinokada/createProps/compare/v0.1.3...v0.1.4) (2022-05-14)
 
 ### [0.1.3](https://github.com/shinokada/createProps/compare/v0.1.2...v0.1.3) (2022-05-13)
