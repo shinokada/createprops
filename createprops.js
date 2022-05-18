@@ -43,7 +43,7 @@ const srcLib = srcValue || defaultSrc;
 const getLines = (fileName, keyword) => {
   let outputs = [];
   const file = fs.readFileSync(fileName, { encoding: 'utf-8' });
-  let arr = file.split(/\r?\n/);
+  let arr = file.split(/;/);
   arr.forEach((line) => {
     if (line.includes(keyword)) {
       outputs.push(line);
@@ -72,10 +72,12 @@ function extractProps(arr) {
   let obj = {};
   let result = [];
   arr.forEach((line) => {
-    // could be tab indentation
-    let newl = line.replace('\texport let ', '').replace(';', '');
+    // remove all line breaks
+    let newline = line.replace(/[\r\n]+/gm, '');
+    // remove tab indentation
+    newline = newline.replace('\texport let ', '');
     // or space indentation
-    let newline = newl.replace('export let ', '').replace(';', '');
+    newline = newline.replace('export let ', '');
     first = newline.slice(0, newline.indexOf(':'));
     second = newline.slice(newline.indexOf(':') + 1, newline.length);
     // console.log('second', second)
