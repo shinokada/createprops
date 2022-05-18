@@ -6,9 +6,9 @@ This script will create json files in the `src/routes/props` directory. This scr
 
 ## Limitation
 
-1. Each props end with `;`
+1. All props end with `;`
 
-The script uses `;` to split lines. VS code automatically insert `;` at the end of each line.
+The script uses `;` to split lines. If you are using VS code, it automatically inserts `;` at the end of each line when you save it.
 
 ```js
 // 💩 no ; at the end
