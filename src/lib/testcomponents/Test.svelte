@@ -5,6 +5,8 @@
   export let isOpen = false;
   export let img = {};
   export let isWide = true;
+  export let child: TopMenuType[] | undefined;
+  export let color: 'blue' | 'red' | 'green' = 'blue';
   export let link: string = '';
   export let rel: string = 'z-10 w-44 text-lg list-none';
   export let one = 1;
