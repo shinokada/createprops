@@ -6,7 +6,7 @@ This script will create json files in the `src/routes/props` directory. This scr
 
 ## Limitation
 
-1; All exported props must end with `;`
+1 All exported props must end with `;`
 
 The script uses `;` to split lines. If you are using VS code, it automatically inserts `;` at the end of each line when you save a file.
 
@@ -18,7 +18,7 @@ export let myvar: string = 'bla bla';
 export let myvar: string = 'bla bla';
 ```
 
-2; Do not use type inference
+2 Do not use type inference
 
 Always write types explicitly.
 
@@ -30,7 +30,7 @@ export let myvar = 'bla bla';
 export let myvar: string = 'bla bla';
 ```
 
-3; Set all the exported props after import statements.
+3 Set all the exported props after import statements.
 
 ```js
 // 💩 no ; at the end
