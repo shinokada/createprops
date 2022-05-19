@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/shinokada/createProps/compare/v0.4.3...v0.4.4) (2022-05-19)
+
+### Bug Fixes
+
+- add check for child2: TopMenu[]|undefined; where there is no = symbol ([83b353c](https://github.com/shinokada/createProps/commit/83b353c5f671c69ab9b6487e9a1c4876ebc4189f))
+
 ### [0.4.3](https://github.com/shinokada/createProps/compare/v0.4.2...v0.4.3) (2022-05-19)
 
 ### Bug Fixes
