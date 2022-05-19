@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/shinokada/createProps/compare/v0.3.2...v0.3.3) (2022-05-19)
+
+### Bug Fixes
+
+- use /\t/g to remove all tabs ([285de88](https://github.com/shinokada/createProps/commit/285de889fd506c29093b459f0dc91439a9a3398d))
+
 ### [0.3.2](https://github.com/shinokada/createProps/compare/v0.3.1...v0.3.2) (2022-05-18)
 
 ### Bug Fixes
