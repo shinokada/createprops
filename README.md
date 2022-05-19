@@ -6,7 +6,7 @@ This script will create json files in the `src/routes/props` directory. This scr
 
 ## Limitation
 
-1. All props end with `;`
+1. All exported props must end with `;`
 
 The script uses `;` to split lines. If you are using VS code, it automatically inserts `;` at the end of each line when you save it.
 
@@ -52,30 +52,6 @@ To `Aside.json`:
 }
 ```
 
-## Prop tables
-
-You can create a table using `Table` and `TableDefaultRow` components.
-
-Tailwind CSS example.
-
-```html
-<script>
-  import { Table, TableDefaultRow } from 'createprops';
-  import componentProps from '../Card/.json'
-  // Props table
-  let items = componentProps.props
-	let propHeader = ['Name', 'Type', 'Default']
-
-  let divClass='w-full relative overflow-x-auto shadow-md sm:rounded-lg py-4'
-
-  let theadClass ='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white'
-</scipt>
-
-<Table header={propHeader} {divClass} {theadClass}>
-  <TableDefaultRow {items} rowState='hover' />
-</Table>
-```
-
 ## Installation
 
 ```
@@ -110,6 +86,33 @@ The default value for lib directory is `./src/lib`. You can change it using `--s
   ...
     "props": "node ./node_modules/createprops/createprops.js --src ./src/mylib-dir"
   }
+```
+
+## Prop tables
+
+You can create a table using `Table` and `TableDefaultRow` Flowbite-Svelte components.
+
+```sh
+npm i -D flowbite-svelte
+```
+
+```html
+<script>
+  import { Table, TableDefaultRow } from 'flowbite-svelte';
+  // import your prop file
+  import componentProps from '../Card/.json'
+  // Props table
+  let items = componentProps.props
+	let propHeader = ['Name', 'Type', 'Default']
+
+  let divClass='w-full relative overflow-x-auto shadow-md sm:rounded-lg py-4'
+
+  let theadClass ='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white'
+</scipt>
+
+<Table header={propHeader} {divClass} {theadClass}>
+  <TableDefaultRow {items} rowState='hover' />
+</Table>
 ```
 
 ## License
