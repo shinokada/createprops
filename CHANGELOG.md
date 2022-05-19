@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/shinokada/createProps/compare/v0.3.3...v0.3.4) (2022-05-19)
+
+### Bug Fixes
+
+- remove Table and TableDefaultRow from export ([c440c01](https://github.com/shinokada/createProps/commit/c440c016141da2fd6382829a893db59e61e74f14))
+
 ### [0.3.3](https://github.com/shinokada/createProps/compare/v0.3.2...v0.3.3) (2022-05-19)
 
 ### Bug Fixes
