@@ -92,6 +92,11 @@ function extractProps(arr) {
     newline = newline.replace('export let ', '');
 
     // check if line contains : a colon
+    // the position of : needs to be before the position of =
+    // for example myvar = 'text-gray-700 hover:bg-gray-100'
+    // otherwise it will slice after hover:
+    let colonPosition = newline.indexOf(':');
+    let equalsPosition = newline.indexOf('=');
     if (newline.includes(':')) {
       name = newline.slice(0, newline.indexOf(':')).trim();
       type = newline.slice(newline.indexOf(':') + 1, newline.length).trim();
@@ -105,14 +110,17 @@ function extractProps(arr) {
     } else {
       // no : in the line
       // it should have = sign to separate name and value
-      name = newline.slice(0, newline.indexOf('=')).trim();
-      value = newline.slice(newline.indexOf('=') + 1, newline.length).trim();
+      console.log(newline.indexOf('='));
+      name = newline.slice(0, newline.indexOf('='));
+
+      value = newline.slice(newline.indexOf('=') + 1, newline.length);
+      console.log(name, value);
       // if value has ' then it is a string
       if (value.includes("'")) {
         type = 'string';
-      } else if (value === 'Symbol()') {
+      } else if (value.includes('Symbol()')) {
         type = 'symbol';
-      } else if (value === 'new Date()') {
+      } else if (value.includes('new Date()')) {
         type = 'date';
       } else {
         // otherwise find the type by using typeof the type value
