@@ -75,8 +75,12 @@ async function createFilenames() {
   return all;
 }
 
+function isEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+
 function extractProps(arr) {
-  let first, second, third;
+  let name, type, value;
   let obj = {};
   let result = [];
   arr.forEach((line) => {
@@ -86,17 +90,37 @@ function extractProps(arr) {
     newline = newline.replace(/\t/g, '');
     // or space indentation
     newline = newline.replace('export let ', '');
-    first = newline.slice(0, newline.indexOf(':'));
-    second = newline.slice(newline.indexOf(':') + 1, newline.length);
-    // console.log('second', second)
-    if (second.includes('=')) {
-      second = second.slice(0, second.indexOf('='));
-      third = newline.slice(newline.indexOf('=') + 1, newline.length);
+
+    // check if line contains : a colon
+    if (newline.includes(':')) {
+      name = newline.slice(0, newline.indexOf(':')).trim();
+      type = newline.slice(newline.indexOf(':') + 1, newline.length).trim();
+      // console.log('type', type)
+      if (type.includes('=')) {
+        type = type.slice(0, type.indexOf('='));
+        value = newline.slice(newline.indexOf('=') + 1, newline.length).trim();
+      } else {
+        value = '-';
+      }
     } else {
-      third = '-';
+      // no : in the line
+      // it should have = sign to separate name and value
+      name = newline.slice(0, newline.indexOf('=')).trim();
+      value = newline.slice(newline.indexOf('=') + 1, newline.length).trim();
+      // if value is not '' then it is a string
+      if (value === "''") {
+        type = 'string';
+      } else if (value === 'Symbol()') {
+        type = 'symbol';
+      } else if (value === 'new Date()') {
+        type = 'date';
+      } else {
+        // otherwise find the type by using typeof the type value
+        type = typeof JSON.parse(value);
+      }
     }
-    // console.log('third', third)
-    let myarr = [first, second, third];
+    // console.log('value', value)
+    let myarr = [name, type, value];
     result.push(myarr);
   });
   obj.props = result;

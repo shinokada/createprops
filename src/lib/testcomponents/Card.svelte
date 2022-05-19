@@ -1,12 +1,21 @@
 <script lang="ts">
   import type { Colors } from '../types';
+  export let href = '';
+  export let isOpen = false;
+  export let img = {};
+  export let isWide = true;
   export let link: string = '';
   export let rel: string = '';
-  export let alt: string = '';
-  export let img: string = '';
-  export let btnLabel: string = '';
+  export let one = 1;
+  export let mysymbol = Symbol();
+  export let date = new Date();
+  // array is an object
+  export let arr = [];
+  export let obj = {};
+  // array is an object
+  export let arr2 = [1, 2, 3];
+
   export let btnColor: Colors = 'blue';
-  export let textdivClass: string = 'p-5';
   export let icons: AccordionIconType = {
     up: ChevronUpSolid,
     down: ChevronDownSolid
