@@ -8,7 +8,7 @@ This script will create json files in the `src/routes/props` directory. This scr
 
 1. All exported props must end with `;`
 
-The script uses `;` to split lines. If you are using VS code, it automatically inserts `;` at the end of each line when you save it.
+The script uses `;` to split lines. If you are using VS code, it automatically inserts `;` at the end of each line when you save a file.
 
 ```js
 // 💩 no ; at the end
@@ -54,7 +54,7 @@ To `Aside.json`:
 
 ## Installation
 
-```
+```sh
 npm i -D createprops
 ```
 
@@ -62,7 +62,7 @@ npm i -D createprops
 
 In your package.json add the following link in the `scripts`:
 
-```
+```json
 ...
 "scripts": {
   ...
@@ -72,7 +72,7 @@ In your package.json add the following link in the `scripts`:
 
 The default value for destination is `./src/routes/props`. You can change it using `--dest`:
 
-```
+```json
 "scripts": {
   ...
     "props": "node ./node_modules/createprops/createprops.js --dest ./props/"
@@ -81,7 +81,7 @@ The default value for destination is `./src/routes/props`. You can change it usi
 
 The default value for lib directory is `./src/lib`. You can change it using `--src`:
 
-```
+```json
 "scripts": {
   ...
     "props": "node ./node_modules/createprops/createprops.js --src ./src/mylib-dir"
@@ -90,7 +90,7 @@ The default value for lib directory is `./src/lib`. You can change it using `--s
 
 ## Prop tables
 
-You can create a table using `Table` and `TableDefaultRow` Flowbite-Svelte components.
+You can create a table using Flowbite-Svelte's `Table` and `TableDefaultRow` components.
 
 ```sh
 npm i -D flowbite-svelte
@@ -103,7 +103,7 @@ npm i -D flowbite-svelte
   import componentProps from '../Card/.json'
   // Props table
   let items = componentProps.props
-	let propHeader = ['Name', 'Type', 'Default']
+  let propHeader = ['Name', 'Type', 'Default']
 
   let divClass='w-full relative overflow-x-auto shadow-md sm:rounded-lg py-4'
 
@@ -114,6 +114,10 @@ npm i -D flowbite-svelte
   <TableDefaultRow {items} rowState='hover' />
 </Table>
 ```
+
+## Example
+
+[Example](https://svelte-sidebar.vercel.app/props)
 
 ## License
 
