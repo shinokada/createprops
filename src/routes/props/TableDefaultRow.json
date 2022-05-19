@@ -1,7 +1,7 @@
 {
   "props": [
-    ["<script lang=\"ts\">  items", " Array<Array<string>>", "-"],
-    ["  html", " boolean ", " false"],
-    ["  rowState", " 'striped' | 'hover' | undefined ", " undefined"]
+    ["  items", " Array<Array<string>>", "-"],
+    ["   html", " boolean ", " false"],
+    ["   rowState", " 'striped' | 'hover' | undefined ", " undefined"]
   ]
 }

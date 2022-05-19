@@ -43,7 +43,15 @@ const srcLib = srcValue || defaultSrc;
 const getLines = (fileName, keyword) => {
   let outputs = [];
   const file = fs.readFileSync(fileName, { encoding: 'utf-8' });
-  let arr = file.split(/;/);
+
+  // removed comment lines, remove line with script, join all lines into one string then split by ; to create an array
+  let arr = file
+    .split('\n')
+    .filter((line) => !line.includes('//'))
+    .filter((line) => !line.includes('script'))
+    .join(' ')
+    .split(/;/);
+
   arr.forEach((line) => {
     if (line.includes(keyword)) {
       outputs.push(line);
