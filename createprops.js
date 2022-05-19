@@ -94,12 +94,11 @@ function extractProps(arr) {
     let colonPosition = newline.indexOf(':');
     let equalsPosition = newline.indexOf('=');
 
+    // if : comes before =, e.g. myvar:string='test hover:bg-gray-100'
     if (newline.includes(':') && colonPosition < equalsPosition) {
-      // if : comes before =, e.g. myvar:string='test hover:bg-gray-100'
       name = newline.slice(0, newline.indexOf(':')).trim();
       type = newline.slice(newline.indexOf(':') + 1, newline.length).trim();
-      // console.log('type', type)
-      console.log('name, colonPosition,equalsPosition: ', name, colonPosition, equalsPosition);
+      // console.log('name, colonPosition,equalsPosition: ', name, colonPosition, equalsPosition);
 
       if (type.includes('=')) {
         type = type.slice(0, type.indexOf('='));
@@ -111,20 +110,29 @@ function extractProps(arr) {
       // no : in the line
       // it should have = sign to separate name and value
       // console.log(newline.indexOf('='));
-      name = newline.slice(0, newline.indexOf('='));
 
-      value = newline.slice(newline.indexOf('=') + 1, newline.length);
-      // console.log(name, value);
-      // if value has ' then it is a string
-      if (value.includes("'")) {
-        type = 'string';
-      } else if (value.includes('Symbol()')) {
-        type = 'symbol';
-      } else if (value.includes('new Date()')) {
-        type = 'date';
+      // indexOf('=') can be -1 if there is no = sign
+      // export let child: TopMenuType[] | undefined;
+      if (newline.indexOf('=') > -1) {
+        name = newline.slice(0, newline.indexOf('='));
+        value = newline.slice(newline.indexOf('=') + 1, newline.length);
+        // console.log(name, value);
+        // if value has ' then it is a string
+        if (value.includes("'")) {
+          type = 'string';
+        } else if (value.includes('Symbol()')) {
+          type = 'symbol';
+        } else if (!value.includes('=')) {
+          type = 'date';
+        } else {
+          // otherwise find the type by using typeof the type value
+          type = typeof JSON.parse(value);
+        }
       } else {
-        // otherwise find the type by using typeof the type value
-        type = typeof JSON.parse(value);
+        // export let child: TopMenuType[] | undefined;
+        name = newline.slice(0, newline.indexOf(':'));
+        type = newline.slice(newline.indexOf(':') + 1, newline.length);
+        value = '';
       }
     }
     // console.log('value', value)

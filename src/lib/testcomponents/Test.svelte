@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { Colors } from '../types';
   export let href = '';
   export let myClass = 'z-10 w-44 text-lg list-none';
   export let isOpen = false;
   export let img = {};
   export let isWide = true;
-  export let child: TopMenuType[] | undefined;
+  export let child: TopMenuType[] | undefined = undefined;
+  export let child2: TopMenuType[] | undefined;
   export let color: 'blue' | 'red' | 'green' = 'blue';
   export let link: string = '';
   export let rel: string = 'z-10 w-44 text-lg list-none';
@@ -39,45 +39,17 @@
     'max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700';
   let buttonClass: string =
     'inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white focus:ring-4 ';
-
-  if (btnColor === 'gray') {
-    buttonClass +=
-      'bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800';
-  } else if (btnColor === 'red') {
-    buttonClass +=
-      'bg-red-700 rounded-lg hover:bg-red-800 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800';
-  } else if (btnColor === 'yellow') {
-    buttonClass +=
-      'bg-yellow-700 rounded-lg hover:bg-yellow-800 focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800';
-  } else if (btnColor === 'green') {
-    buttonClass +=
-      'bg-green-700 rounded-lg hover:bg-green-800 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800';
-  } else if (btnColor === 'indigo') {
-    buttonClass +=
-      'bg-indigo-700 rounded-lg hover:bg-indigo-800 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800';
-  } else if (btnColor === 'purple') {
-    buttonClass +=
-      'bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800';
-  } else if (btnColor === 'pink') {
-    buttonClass +=
-      'bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800';
-  } else {
-    buttonClass +=
-      'bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800';
-  }
 </script>
 
 <div class={divClass} class:has-paragraph={$$slots.paragraph}>
   {#if img}
     {#if link}
       <a href={link} {rel}>
-        <img class="rounded-t-lg" src={img} {alt} />
+        <img class="rounded-t-lg" />
       </a>
-    {:else}
-      <img class="rounded-t-lg" src={img} {alt} />
     {/if}
   {/if}
-  <div class={textdivClass}>
+  <div>
     {#if header}
       {#if link}
         <a href={link} {rel}>
@@ -94,9 +66,8 @@
     {#if $$slots.paragraph}
       <slot name="paragraph" />
     {/if}
-    {#if link && btnLabel}
+    {#if link}
       <a href={link} {rel} class={buttonClass}>
-        {btnLabel}
         <svg
           class="ml-2 -mr-1 w-4 h-4"
           fill="currentColor"
