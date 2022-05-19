@@ -107,8 +107,8 @@ function extractProps(arr) {
       // it should have = sign to separate name and value
       name = newline.slice(0, newline.indexOf('=')).trim();
       value = newline.slice(newline.indexOf('=') + 1, newline.length).trim();
-      // if value is not '' then it is a string
-      if (value === "''") {
+      // if value has ' then it is a string
+      if (value.includes("'")) {
         type = 'string';
       } else if (value === 'Symbol()') {
         type = 'symbol';

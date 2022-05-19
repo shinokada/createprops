@@ -1,11 +1,12 @@
 {
   "props": [
     ["href", "string", "''"],
+    ["myClass", "string", "'z-10 w-44 text-lg list-none'"],
     ["isOpen", "boolean", "false"],
     ["img", "object", "{}"],
     ["isWide", "boolean", "true"],
     ["link", "string ", "''"],
-    ["rel", "string ", "''"],
+    ["rel", "string ", "'z-10 w-44 text-lg list-none'"],
     ["one", "number", "1"],
     ["mysymbol", "symbol", "Symbol()"],
     ["date", "date", "new Date()"],

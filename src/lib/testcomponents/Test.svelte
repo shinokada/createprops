@@ -1,11 +1,12 @@
 <script lang="ts">
   import type { Colors } from '../types';
   export let href = '';
+  export let myClass = 'z-10 w-44 text-lg list-none';
   export let isOpen = false;
   export let img = {};
   export let isWide = true;
   export let link: string = '';
-  export let rel: string = '';
+  export let rel: string = 'z-10 w-44 text-lg list-none';
   export let one = 1;
   export let mysymbol = Symbol();
   export let date = new Date();
