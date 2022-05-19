@@ -18,19 +18,7 @@ export let myvar: string = 'bla bla';
 export let myvar: string = 'bla bla';
 ```
 
-2 Do not use type inference
-
-Always write types explicitly.
-
-```js
-// 💩 no inference
-export let myvar = 'bla bla';
-
-// good
-export let myvar: string = 'bla bla';
-```
-
-3 Set all the exported props after import statements.
+2 Set all the exported props at the top after import statements.
 
 ```js
 // 💩 no ; at the end
