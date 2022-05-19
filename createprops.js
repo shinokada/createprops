@@ -75,10 +75,6 @@ async function createFilenames() {
   return all;
 }
 
-function isEmpty(obj) {
-  return Object.keys(obj).length === 0;
-}
-
 function extractProps(arr) {
   let name, type, value;
   let obj = {};
@@ -97,10 +93,14 @@ function extractProps(arr) {
     // otherwise it will slice after hover:
     let colonPosition = newline.indexOf(':');
     let equalsPosition = newline.indexOf('=');
-    if (newline.includes(':')) {
+
+    if (newline.includes(':') && colonPosition < equalsPosition) {
+      // if : comes before =, e.g. myvar:string='test hover:bg-gray-100'
       name = newline.slice(0, newline.indexOf(':')).trim();
       type = newline.slice(newline.indexOf(':') + 1, newline.length).trim();
       // console.log('type', type)
+      console.log('name, colonPosition,equalsPosition: ', name, colonPosition, equalsPosition);
+
       if (type.includes('=')) {
         type = type.slice(0, type.indexOf('='));
         value = newline.slice(newline.indexOf('=') + 1, newline.length).trim();
@@ -110,11 +110,11 @@ function extractProps(arr) {
     } else {
       // no : in the line
       // it should have = sign to separate name and value
-      console.log(newline.indexOf('='));
+      // console.log(newline.indexOf('='));
       name = newline.slice(0, newline.indexOf('='));
 
       value = newline.slice(newline.indexOf('=') + 1, newline.length);
-      console.log(name, value);
+      // console.log(name, value);
       // if value has ' then it is a string
       if (value.includes("'")) {
         type = 'string';
