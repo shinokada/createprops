@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.5](https://github.com/shinokada/createProps/compare/v0.3.4...v0.3.5) (2022-05-19)
+
+### Bug Fixes
+
+- remove comment lines, remove line with script, join all lines then split by ; to create an array ([92103e6](https://github.com/shinokada/createProps/commit/92103e652fac426af16430f9293dbb28f28429c8))
+
 ### [0.3.4](https://github.com/shinokada/createProps/compare/v0.3.3...v0.3.4) (2022-05-19)
 
 ### Bug Fixes
