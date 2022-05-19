@@ -21,7 +21,7 @@ export let myvar: string = 'bla bla';
 2 Set all the exported props at the top after import statements.
 
 ```js
-// 💩 no ; at the end
+// 💩 no
 $: if (color && isOpen) {
   buttonClass = btnClass + colorClass;
 } else {
@@ -31,7 +31,6 @@ export let iconSize: number = 24;
 
 // good
 export let iconSize: number = 24;
-
 $: if (color && isOpen) {
   buttonClass = btnClass + colorClass;
 } else {
