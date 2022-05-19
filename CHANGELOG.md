@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/shinokada/createProps/compare/v0.4.2...v0.4.3) (2022-05-19)
+
+### Bug Fixes
+
+- solve for myvar:string='test hover:text-white' where variable has a : in the css ([bf384a8](https://github.com/shinokada/createProps/commit/bf384a8c87ef49d2b5f3989c7d9f327205effee3))
+
 ### [0.4.2](https://github.com/shinokada/createProps/compare/v0.4.1...v0.4.2) (2022-05-19)
 
 ### Bug Fixes
