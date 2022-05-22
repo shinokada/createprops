@@ -38,6 +38,22 @@ $: if (color && isOpen) {
 }
 ```
 
+3. Not able to extract functions
+
+Currently the script is not able to extract functions.
+
+```js
+// can't do it
+export function greet(name) {
+  alert(`hello ${name}!`);
+}
+
+// can't do it
+export const myfunc = (name) => {
+  open = !open;
+};
+```
+
 ## Example
 
 From `Aside.svelte`:

@@ -1,7 +1,12 @@
 <script lang="ts">
+  export function greet(name) {
+    alert(`hello ${name}!`);
+  }
+  export const toggleBtn = () => (isOpen = !isOpen);
+  export let isOpen = false;
   export let href = '';
   export let myClass = 'z-10 w-44 text-lg list-none';
-  export let isOpen = false;
+
   export let img = {};
   export let isWide = true;
   export let child: TopMenuType[] | undefined = undefined;

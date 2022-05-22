@@ -21,9 +21,9 @@
   "author": "Shinichi Okada",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shinokada/createProps/issues"
+    "url": "https://github.com/shinokada/createprops/issues"
   },
-  "homepage": "https://github.com/shinokada/createProps#readme",
+  "homepage": "https://github.com/shinokada/createprops#readme",
   "type": "module",
   "devDependencies": {
     "eslint": "^8.15.0",

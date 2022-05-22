@@ -1,9 +1,9 @@
 {
   "props": [
-    ["  href ", "string", " ''"],
-    ["   myClass ", "string", " 'z-10 w-44 text-lg list-none'"],
     ["   isOpen ", "date", " false"],
-    ["   img ", "date", " {}"],
+    ["   href ", "string", " ''"],
+    ["   myClass ", "string", " 'z-10 w-44 text-lg list-none'"],
+    ["    img ", "date", " {}"],
     ["   isWide ", "date", " true"],
     ["child", "TopMenuType[] | undefined ", "undefined"],
     ["   child2", " TopMenuType[] | undefined", ""],
