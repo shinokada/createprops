@@ -1,5 +1,7 @@
 {
   "props": [
+    ["   }    comment", " {     id: string", ""],
+    ["   review", " {     name: string", ""],
     ["   isOpen ", "date", " false"],
     ["   href ", "string", " ''"],
     ["   myClass ", "string", " 'z-10 w-44 text-lg list-none'"],

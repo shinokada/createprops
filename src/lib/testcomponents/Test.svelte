@@ -2,7 +2,48 @@
   export function greet(name) {
     alert(`hello ${name}!`);
   }
+
+  export let comment: {
+    id: string;
+    user: {
+      name: string;
+      img: {
+        src: string;
+        alt: string;
+      };
+      joined: string;
+    };
+    total: number;
+    rating: number;
+    heading: string;
+    address: string;
+    datetime: string;
+  };
+
+  export let review: {
+    name: string;
+    imgSrc: string;
+    imgAlt: string;
+    address: string | undefined;
+    addressIcon: typeof SvelteComponent | undefined;
+    reviewDate: string | undefined;
+    title: string;
+    rating: number;
+    item: string | undefined;
+    itemIcon: typeof SvelteComponent | undefined;
+    option1: string | undefined;
+    option1Icon: typeof SvelteComponent | undefined;
+    option2: string | undefined;
+    option2Icon: typeof SvelteComponent | undefined;
+  };
+
+  export const labelClass = (inline, extraClass) => {
+    console.log('hi there');
+    classNames(inline ? 'inline-flex' : 'flex', 'items-center', extraClass);
+  };
+
   export const toggleBtn = () => (isOpen = !isOpen);
+
   export let isOpen = false;
   export let href = '';
   export let myClass = 'z-10 w-44 text-lg list-none';
@@ -31,10 +72,12 @@
     up: ChevronUpSolid,
     down: ChevronDownSolid
   };
+
   export let icons: AccordionIconType = {
     up: ChevronUpSolid,
     down: ChevronDownSolid
   };
+
   export let activeDropdownDiv: string =
     'z-10 w-44 text-lg list-none bg-white rounded divide-y divide-gray-100 shadow';
   export let headerClass: string =
