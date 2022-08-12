@@ -1,45 +1,27 @@
 {
   "props": [
-    ["   isOpen ", "date", " false"],
-    ["   href ", "string", " ''"],
+    ["  isBoolean ", "boolean", " false"],
+    ["   emptyString ", "string", " ''"],
     ["   myClass ", "string", " 'z-10 w-44 text-lg list-none'"],
-    ["    img ", "date", " {}"],
-    ["   isWide ", "date", " true"],
+    ["   img ", "object", " {}"],
+    ["   isWide ", "boolean", " true"],
     ["child", "TopMenuType[] | undefined ", "undefined"],
     ["   child2", " TopMenuType[] | undefined", ""],
     ["color", "'blue' | 'red' | 'green' ", "'blue'"],
     ["link", "string ", "''"],
-    ["rel", "string ", "'z-10 w-44 text-lg list-none'"],
-    ["   one ", "date", " 1"],
+    ["   one ", "number", " 1"],
     ["   mysymbol ", "symbol", " Symbol()"],
-    ["   date ", "date", " new Date()"],
-    ["   activeChildLi ", "string", " 'block py-2 px-4 text-base text-gray-700 hover:bg-gray-100'"],
-    [
-      "dropdownLi",
-      "string ",
-      "'flex justify-between items-center py-2 pr-4 pl-3 w-full text-base font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto'"
-    ],
-    ["   arr ", "date", " []"],
-    ["   obj ", "date", " {}"],
-    ["   arr2 ", "date", " [1, 2, 3]"],
+    ["   arr ", "object", " []"],
+    ["   obj ", "object", " {}"],
+    ["   arr2 ", "object", " [1, 2, 3]"],
     ["btnColor", "Colors ", "'blue'"],
     ["icons", "AccordionIconType ", "{     up: ChevronUpSolid,     down: ChevronDownSolid   }"],
-    ["icons", "AccordionIconType ", "{     up: ChevronUpSolid,     down: ChevronDownSolid   }"],
-    [
-      "activeDropdownDiv",
-      "string ",
-      "'z-10 w-44 text-lg list-none bg-white rounded divide-y divide-gray-100 shadow'"
-    ],
-    [
-      "headerClass",
-      "string ",
-      "'mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'"
-    ],
-    ["header", "string ", "''"],
     [
       "divClass",
       "string ",
       "'max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'"
-    ]
+    ],
+    ["      review", " reviewType", ""],
+    ["    comment", " commentType", ""]
   ]
 }

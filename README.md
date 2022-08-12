@@ -38,7 +38,7 @@ $: if (color && isOpen) {
 }
 ```
 
-3. Not able to extract functions
+1. Does not extract functions
 
 Currently the script is not able to extract functions.
 
@@ -52,6 +52,18 @@ export function greet(name) {
 export const myfunc = (name) => {
   open = !open;
 };
+```
+
+4. Does not extract multi-layered objects
+
+```js
+// can do
+export let icons: AccordionIconType = {
+  up: ChevronUpSolid,
+  down: ChevronDownSolid
+};
+
+// can't do it
 ```
 
 ## Example

@@ -1,25 +1,16 @@
 <script lang="ts">
-  export function greet(name) {
-    alert(`hello ${name}!`);
-  }
-  export const toggleBtn = () => (isOpen = !isOpen);
-  export let isOpen = false;
-  export let href = '';
+  export let isBoolean = false;
+  export let emptyString = '';
   export let myClass = 'z-10 w-44 text-lg list-none';
-
   export let img = {};
   export let isWide = true;
   export let child: TopMenuType[] | undefined = undefined;
   export let child2: TopMenuType[] | undefined;
   export let color: 'blue' | 'red' | 'green' = 'blue';
   export let link: string = '';
-  export let rel: string = 'z-10 w-44 text-lg list-none';
   export let one = 1;
   export let mysymbol = Symbol();
-  export let date = new Date();
-  export let activeChildLi = 'block py-2 px-4 text-base text-gray-700 hover:bg-gray-100';
-  export let dropdownLi: string =
-    'flex justify-between items-center py-2 pr-4 pl-3 w-full text-base font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto';
+  // export let date = new Date(2018, 11, 24);
   // array is an object
   export let arr = [];
   export let obj = {};
@@ -27,23 +18,29 @@
   export let arr2 = [1, 2, 3];
 
   export let btnColor: Colors = 'blue';
+  // this works
   export let icons: AccordionIconType = {
     up: ChevronUpSolid,
     down: ChevronDownSolid
   };
-  export let icons: AccordionIconType = {
-    up: ChevronUpSolid,
-    down: ChevronDownSolid
-  };
-  export let activeDropdownDiv: string =
-    'z-10 w-44 text-lg list-none bg-white rounded divide-y divide-gray-100 shadow';
-  export let headerClass: string =
-    'mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white';
-  export let header: string = '';
+
   export let divClass: string =
     'max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700';
-  let buttonClass: string =
-    'inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white focus:ring-4 ';
+
+  // export const toggleBtn = ():boolean => (isOpen = !isOpen);
+
+  // export const greet = (name) => {
+  //   alert(`hello ${name}!`);
+  // };
+
+  export let review: reviewType;
+
+  export let comment: commentType;
+
+  // export const labelClass = (inline, extraClass) => {
+  //   console.log('hi there');
+  //   classNames(inline ? 'inline-flex' : 'flex', 'items-center', extraClass);
+  // };
 </script>
 
 <div class={divClass} class:has-paragraph={$$slots.paragraph}>

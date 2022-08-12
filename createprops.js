@@ -45,10 +45,13 @@ const getLines = (fileName, keyword) => {
   const file = fs.readFileSync(fileName, { encoding: 'utf-8' });
 
   // removed comment lines, remove line with script, join all lines into one string then split by ; to create an array
+  // this extract ending with ;
   let arr = file
     .split('\n')
     .filter((line) => !line.includes('//'))
     .filter((line) => !line.includes('script'))
+    // remove lines with ; { . these are objects
+    .filter((line) => !line.includes(': {'))
     .join(' ')
     .split(/;/);
 
@@ -101,9 +104,11 @@ function extractProps(arr) {
       // console.log('name, colonPosition,equalsPosition: ', name, colonPosition, equalsPosition);
 
       if (type.includes('=')) {
+        //something:string='test hover:bg-gray-100'
         type = type.slice(0, type.indexOf('='));
         value = newline.slice(newline.indexOf('=') + 1, newline.length).trim();
       } else {
+        //string;
         value = '-';
       }
     } else {
@@ -122,8 +127,10 @@ function extractProps(arr) {
           type = 'string';
         } else if (value.includes('Symbol()')) {
           type = 'symbol';
-        } else if (!value.includes('=')) {
-          type = 'date';
+        } else if (value.match('true') || value.match('false')) {
+          //boolean true false
+          // export let isWide = true;
+          type = 'boolean';
         } else {
           // otherwise find the type by using typeof the type value
           type = typeof JSON.parse(value);
