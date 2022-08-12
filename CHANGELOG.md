@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.6](https://github.com/shinokada/createProps/compare/v0.4.5...v0.4.6) (2022-08-12)
+
+### Features
+
+- add function and object examples ([bc1febc](https://github.com/shinokada/createProps/commit/bc1febc6bf463dd7eae2bf3cd4973b6ac6683001))
+- update README and remove lines with ; { in getLines ([59199db](https://github.com/shinokada/createProps/commit/59199db18d425fe9cfd6da04f2b92d098d1d866d))
+
 ### [0.4.5](https://github.com/shinokada/createProps/compare/v0.4.4...v0.4.5) (2022-05-22)
 
 ### [0.4.4](https://github.com/shinokada/createProps/compare/v0.4.3...v0.4.4) (2022-05-19)
