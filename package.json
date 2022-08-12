@@ -1,6 +1,6 @@
 {
   "name": "createprops",
-  "version": "0.4.6",
+  "version": "0.4.5",
   "description": "Create Svelte component props",
   "main": "index.js",
   "scripts": {
