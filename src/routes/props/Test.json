@@ -22,6 +22,10 @@
       "'max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'"
     ],
     ["      review", " reviewType", ""],
-    ["    comment", " commentType", ""]
+    [
+      "comment",
+      "commentType ",
+      "{     id: 1,       name: 'John',       joined: '2022-08-01'     }   }"
+    ]
   ]
 }

@@ -35,7 +35,13 @@
 
   export let review: reviewType;
 
-  export let comment: commentType;
+  export let comment: commentType = {
+    id: 1,
+    user: {
+      name: 'John',
+      joined: '2022-08-01'
+    }
+  };
 
   // export const labelClass = (inline, extraClass) => {
   //   console.log('hi there');
