@@ -26,11 +26,10 @@ npm i -D createprops
 In your package.json add the following link in the `scripts`:
 
 ```json
-...
 "scripts": {
   ...
-    "props": "node ./node_modules/createprops/createprops.js"
-  }
+  "props": "node ./node_modules/createprops/createprops.js"
+},
 ```
 
 The default value for destination is `./src/routes/props`. You can change it using `--dest`:
@@ -38,8 +37,8 @@ The default value for destination is `./src/routes/props`. You can change it usi
 ```json
 "scripts": {
   ...
-    "props": "node ./node_modules/createprops/createprops.js --dest ./props/"
-  }
+  "props": "node ./node_modules/createprops/createprops.js --dest ./props/"
+},
 ```
 
 The default value for lib directory is `./src/lib`. You can change it using `--src`:
@@ -47,13 +46,13 @@ The default value for lib directory is `./src/lib`. You can change it using `--s
 ```json
 "scripts": {
   ...
-    "props": "node ./node_modules/createprops/createprops.js --src ./src/mylib-dir"
-  }
+  "props": "node ./node_modules/createprops/createprops.js --src ./src/mylib-dir"
+},
 ```
 
 ## Example
 
-From `Aside.svelte`:
+From `./src/lib/Aside.svelte`:
 
 ```js
 export let transitionParams: TransitionParamTypes = {};
@@ -61,7 +60,7 @@ export let transitionType: TransitionTypes = 'fly';
 export let asideClass: string = 'absolute w-auto h-screen bg-gray-200 border-r-2 shadow-lg';
 ```
 
-To `Aside.json`:
+To `./src/routes/props/Aside.json`:
 
 ```json
 {
@@ -163,6 +162,8 @@ npm i -D flowbite-svelte
 ```
 
 ## Example
+
+![example](https://raw.githubusercontent.com/shinokada/createprops/main/images/createprops.png)
 
 [Example](https://svelte-sidebar.vercel.app/props)
 
