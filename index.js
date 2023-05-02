@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { createprops } from './createprops.js';
+import { default as createprops } from './createprops.js';
 
 createprops();
