@@ -1,1 +1,4 @@
-export { defalut as createprops } from './createprops';
+#!/usr/bin/env node
+import { createprops } from './createprops.js';
+
+createprops();

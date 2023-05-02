@@ -48,9 +48,8 @@ const getLines = (fileName, keyword) => {
   // this extract ending with ;
   let arr = file
     .split('\n')
-    .filter((line) => !line.includes('//'))
-    .filter((line) => !line.includes('script'))
-    // remove lines with ; { . these are objects
+    .filter((line) => !line.trim().startsWith('//'))
+    .filter((line) => !line.trim().startsWith('<script'))
     .filter((line) => !line.includes(': {'))
     .join(' ')
     .split(/;/);
