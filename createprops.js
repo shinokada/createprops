@@ -6,12 +6,13 @@
  * You can pass arguments to the script.
  * node createProps.js --src=src/lib --dest=src/props
  */
-export default async function createprops() {
-  import * as fs from 'fs';
-  import path from 'path';
-  import { lstat, readdir } from 'node:fs/promises';
-  import { join } from 'node:path';
 
+import * as fs from 'fs';
+import path from 'path';
+import { lstat, readdir } from 'node:fs/promises';
+import { join } from 'node:path';
+
+export default async function createprops() {
   const defaultSrc = './src/lib';
   const defaultDest = './src/routes/props/';
   const exportLet = 'export let';
