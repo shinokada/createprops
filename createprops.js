@@ -53,7 +53,7 @@ export default async function createprops() {
       .filter((line) => !line.trim().startsWith('<script'))
       .filter((line) => !line.includes(': {'))
       .join(' ')
-      .split(/;/);
+      .split(/;(?![^\']*\'[^\']*\'[^\']*$)/);
 
     arr.forEach((line) => {
       if (line.includes(keyword)) {
