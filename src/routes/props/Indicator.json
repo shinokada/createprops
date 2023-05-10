@@ -1,0 +1,10 @@
+{
+  "props": [
+    ["color:", "string", ""],
+    ["rounded", "boolean", "false"],
+    ["size", "'xs' | 'sm' | 'md' | 'lg' | 'xl'", "'md'"],
+    ["border", "boolean", "false"],
+    ["placement:", "string", ""],
+    ["offset", "boolean", "true"]
+  ]
+}

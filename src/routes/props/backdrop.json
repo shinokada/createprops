@@ -1,0 +1,6 @@
+{
+  "props": [
+    ["open", "string", "false"],
+    ["placement: string;", "string", ""]
+  ]
+}

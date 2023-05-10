@@ -1,0 +1,6 @@
+{
+  "props": [
+    ["color:", "string", ""],
+    ["embedded", "boolean", "false"]
+  ]
+}

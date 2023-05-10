@@ -1,0 +1,8 @@
+{
+  "props": [
+    ["name", "string", "''"],
+    ["tooltip: Placement | 'none';", "string", ""],
+    ["pill", "boolean | undefined", "undefined"],
+    ["textOutside", "boolean | undefined", "undefined"]
+  ]
+}
