@@ -1,10 +1,6 @@
 {
   "props": [
-    [
-      "color",
-      "| 'gray'     | 'red'     | 'yellow'     | 'green'     | 'indigo'     | 'purple'     | 'pink'     | 'blue'     | 'dark'     | 'none' ",
-      "'dark'"
-    ],
-    ["embedded", "boolean ", "false"]
+    ["color:", "string", ""],
+    ["embedded", "boolean", "false"]
   ]
 }

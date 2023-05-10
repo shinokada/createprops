@@ -1,6 +1,6 @@
 {
   "props": [
-    ["    value", " number", ""],
-    ["size", "'sm' | 'md' | 'lg' ", "'md'"]
+    ["value: number;", "string", ""],
+    ["size", "'sm' | 'md' | 'lg'", "'md'"]
   ]
 }

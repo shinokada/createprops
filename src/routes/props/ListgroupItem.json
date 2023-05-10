@@ -1,8 +1,8 @@
 {
   "props": [
-    ["active", "boolean ", "getContext('active')"],
-    ["current", "boolean ", "false"],
-    ["disabled", "boolean ", "false"],
-    ["href", "string ", "''"]
+    ["active", "boolean", "getContext('active')"],
+    ["current", "boolean", "false"],
+    ["disabled", "boolean", "false"],
+    ["href", "string", "''"]
   ]
 }

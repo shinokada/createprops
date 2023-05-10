@@ -1,6 +1,6 @@
 {
   "props": [
-    ["caption", "string ", "''"],
-    ["captionClass", "string ", "''"]
+    ["caption", "string", "''"],
+    ["captionClass", "string", "''"]
   ]
 }

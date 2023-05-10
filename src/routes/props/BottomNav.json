@@ -1,6 +1,6 @@
 {
   "props": [
-    ["position", "'static'|'fixed'|'absolute'|'relative'|'sticky' ", "'fixed'"],
+    ["position", "'static'|'fixed'|'absolute'|'relative'|'sticky'", "'fixed'"],
     [
       "navType",
       "'default'|'border'|'application'|'pagination'|'group'|'card'|'meeting'|'video'|'custom'",
@@ -8,9 +8,9 @@
     ],
     [
       "outerDefault",
-      "string ",
+      "string",
       "'w-full z-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600'"
     ],
-    ["innerDefault", "string ", "'grid h-full max-w-lg mx-auto'"]
+    ["innerDefault", "string", "'grid h-full max-w-lg mx-auto'"]
   ]
 }

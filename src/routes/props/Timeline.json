@@ -1,9 +1,9 @@
 {
   "props": [
-    ["customClass", "string ", "''"],
+    ["customClass", "string", "''"],
     [
       "order",
-      "'default' | 'vertical' | 'horizontal' | 'activity' | 'group' | 'custom' ",
+      "'default' | 'vertical' | 'horizontal' | 'activity' | 'group' | 'custom'",
       "'default'"
     ]
   ]

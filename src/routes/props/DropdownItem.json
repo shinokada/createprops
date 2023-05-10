@@ -2,9 +2,9 @@
   "props": [
     [
       "defaultClass",
-      "string ",
+      "string",
       "'font-medium py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600'"
     ],
-    ["href", "string | undefined ", "undefined"]
+    ["href", "string | undefined", "undefined"]
   ]
 }

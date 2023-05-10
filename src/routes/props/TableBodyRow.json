@@ -2,7 +2,7 @@
   "props": [
     [
       "color",
-      "'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'default' | 'custom' ",
+      "'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'default' | 'custom'",
       "getContext('color')"
     ]
   ]

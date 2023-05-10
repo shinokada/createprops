@@ -1,6 +1,6 @@
 {
   "props": [
-    [" open ", "boolean", " false"],
-    [" placement", " string", ""]
+    ["open", "string", "false"],
+    ["placement: string;", "string", ""]
   ]
 }
