@@ -1,0 +1,7 @@
+{
+  "props": [
+    ["divDefault", "string ", "'p-4 text-sm'"],
+    ["dismissable", "boolean ", "false"],
+    ["accent", "boolean ", "false"]
+  ]
+}

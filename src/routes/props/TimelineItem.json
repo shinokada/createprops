@@ -1,0 +1,8 @@
+{
+  "props": [
+    ["title", "string ", "''"],
+    ["date", "string ", "''"],
+    ["customDiv", "string ", "''"],
+    ["customTimeClass", "string ", "''"]
+  ]
+}

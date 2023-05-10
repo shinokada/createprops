@@ -1,0 +1,6 @@
+{
+  "props": [
+    ["customClass", "string ", "''"],
+    ["footerType", "'custom' | 'sitemap' | 'default' | 'logo' | 'socialmedia' ", "'default'"]
+  ]
+}

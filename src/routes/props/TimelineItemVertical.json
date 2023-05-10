@@ -1,0 +1,6 @@
+{
+  "props": [
+    ["title", " string", ""],
+    [" date", " string", ""]
+  ]
+}
