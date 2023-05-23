@@ -2,18 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.5.4](https://github.com/shinokada/createProps/compare/v0.5.3...v0.5.4) (2023-05-23)
+### [0.5.5](https://github.com/shinokada/createProps/compare/v0.5.4...v0.5.5) (2023-05-23)
 
+### [0.5.4](https://github.com/shinokada/createProps/compare/v0.5.3...v0.5.4) (2023-05-23)
 
 ### Features
 
-* ["iosTop: string;","string",""] to ["iosTop","string",""] ([961c6dd](https://github.com/shinokada/createProps/commit/961c6dd148a0f9eba6838c73622130f64a268f07))
-
+- ["iosTop: string;","string",""] to ["iosTop","string",""] ([961c6dd](https://github.com/shinokada/createProps/commit/961c6dd148a0f9eba6838c73622130f64a268f07))
 
 ### Bug Fixes
 
-* add flowbite-svelte components and props ([473211b](https://github.com/shinokada/createProps/commit/473211b4e705f448b85949bf6ea0f10814480a51))
-* make multiple lines to a single line in getLines function ([63839d2](https://github.com/shinokada/createProps/commit/63839d29e7fc39dcb4118d9f8116298251553a32))
+- add flowbite-svelte components and props ([473211b](https://github.com/shinokada/createProps/commit/473211b4e705f448b85949bf6ea0f10814480a51))
+- make multiple lines to a single line in getLines function ([63839d2](https://github.com/shinokada/createProps/commit/63839d29e7fc39dcb4118d9f8116298251553a32))
 
 ### [0.4.9](https://github.com/shinokada/createProps/compare/v0.4.8...v0.4.9) (2022-08-12)
 
