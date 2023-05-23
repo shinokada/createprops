@@ -1,6 +1,1 @@
-{
-  "props": [
-    ["title: string;", "string", ""],
-    ["date: string;", "string", ""]
-  ]
-}
+{"props":[["title","string",""],["date","string",""]]}

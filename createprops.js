@@ -108,7 +108,6 @@ export default async function createprops() {
         if (colonPosition > -1 && colonPosition < equalsPosition) {
           // Extract the name from the line
           name = newline.slice(0, colonPosition).trim();
-
           // Extract the remaining part of the line after the colon
           let remaining = newline.slice(colonPosition + 1).trim();
 
@@ -137,11 +136,18 @@ export default async function createprops() {
           } else {
             // If there's only one part, set the name and leave the value empty
             name = newline.trim();
+            const nameParts = name.split(':');
+            if (nameParts.length === 2) {
+              name = nameParts[0].trim();
+              type = nameParts[1].replace(';', '').trim();
+            }
             value = '';
           }
 
           // Default the type to 'string'
-          type = 'string';
+          if (!type) {
+            type = 'string';
+          }
         }
 
         // If the value is empty or ends with an equals sign, check the next lines for the value

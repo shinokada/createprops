@@ -27,6 +27,6 @@
   }
 </script>
 
-<Popper data-tooltip rounded shadow {...$$restProps} class={toolTipClass} on:show>
+<Popper rounded shadow {...$$restProps} class={toolTipClass} on:show>
   <slot />
 </Popper>
